@@ -1,0 +1,78 @@
+.card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card__user__avatar {
+}
+
+.card__user__avatar a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.card__user__avatar p {
+  font: var(--textBold);
+}
+
+.card__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.card__actions i {
+  font-size: 1.5rem;
+}
+
+.card__text {
+  padding: 0 1rem;
+  font: var(--text1);
+}
+
+.card__text .secondary {
+  color: var(--gray20);
+}
+
+.card__text .time {
+  font: var(--text3);
+  color: var(--gray20);
+}
+
+.card__text span {
+  color: var(--black);
+}
+
+.card__comment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1rem;
+  font: var(--text1);
+}
+
+.card__comment__avatar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card__comment p {
+  opacity: 0.7;
+}
+
+.card__comment strong {
+  color: var(--blue10);
+  cursor: pointer;
+}

@@ -1,0 +1,32 @@
+@import "./search-recients.css";
+
+.search {
+  display: none;
+  position: relative;
+}
+
+.search__content {
+  border-radius: 4px;
+  border: 1px solid var(--gray10);
+  padding: 0.25rem 0.625rem;
+}
+
+.search__input {
+  border: none;
+  outline: none;
+}
+
+.icon-search {
+  color: var(--gray10);
+}
+
+.icon-search,
+.search__input {
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 768px) {
+  .search {
+    display: block;
+  }
+}

@@ -1,0 +1,16 @@
+:root {
+  --fontbase: Open Sans;
+  --textBold: 600 0.875rem/1.187rem var(--fontbase);
+  --text1: 400 0.875rem/1.187rem var(--fontbase);
+  --text2: 400 0.75rem/1rem var(--fontbase);
+  --text3: 400 0.7rem/0.8125rem var(--fontbase);
+  --text4: 400 1rem/1.3125rem var(--fontbase);
+  --text4-bold: 600 1rem/1.3125rem var(--fontbase);
+  --text5: 400 1.175rem/2.375rem var(--fontbase);
+  --black: #000;
+  --white: #fff;
+  --blue10: #1c59c9;
+  --blue20: #306197;
+  --gray10: #dbdbdb;
+  --gray20: #696666;
+}

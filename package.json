@@ -1,0 +1,24 @@
+{
+  "name": "portafolio-instantanea",
+  "version": "1.0.0",
+  "description": "<div align=\"center\"> <img width=\"120px\"  src=\"https://raw.githubusercontent.com/no-te-rindas/logo/main/Logo/LeonidasEsteban-destello-envolvente-cuadrada.png\" /> </div>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "servor --reload"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidMarioLC/portafolio-instantanea.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidMarioLC/portafolio-instantanea/issues"
+  },
+  "homepage": "https://github.com/DavidMarioLC/portafolio-instantanea#readme",
+  "devDependencies": {
+    "servor": "^4.0.2"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio de Instantanea" />
+    <title>Perfil</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__content">
+          <a href="./index.html">
+            <img
+              src="./images/logo-instantanea.svg"
+              alt="Logo de instantanea"
+              title="Logo de instantanea"
+              width="84"
+              height="24"
+              loading="lazy"
+            />
+          </a>
+          <div tabindex="0" class="search" aria-label="Buscar">
+            <div class="search__content">
+              <i class="icon-search"></i>
+              <input class="search__input" type="text" placeholder="Search" />
+            </div>
+            <div class="search__popup">
+              <div class="search__recients">
+                <div class="search__recients__title">
+                  <p>Recientes</p>
+                  <p>Borrar todo</p>
+                </div>
+                <div class="search__recients__item">
+                  <img
+                    src="./images/user-avatar-01.png"
+                    alt=""
+                    width="54"
+                    height="54"
+                  />
+                  <div>
+                    <p>estherfullstack</p>
+                    <p>esther Cueva Bravo • Following</p>
+                  </div>
+                  <i class="icon-close"></i>
+                </div>
+                <div class="search__recients__item">
+                  <img
+                    src="./images/user-avatar-02.png"
+                    alt=""
+                    width="54"
+                    height="54"
+                  />
+                  <div>
+                    <p>carlosaws</p>
+                    <p>carloselmejor.com 👨‍💻</p>
+                  </div>
+                  <i class="icon-close"></i>
+                </div>
+                <div class="search__recients__item">
+                  <img
+                    src="./images/user-avatar-03.png"
+                    alt=""
+                    width="54"
+                    height="54"
+                  />
+                  <div>
+                    <p>juandev</p>
+                    <p>juancodeveloper 🔥</p>
+                  </div>
+                  <i class="icon-close"></i>
+                </div>
+                <div class="search__recients__item">
+                  <img
+                    src="./images/user-avatar-04.png"
+                    alt=""
+                    width="54"
+                    height="54"
+                  />
+                  <div>
+                    <p>crisangela</p>
+                    <p>crisfrontend 🧙‍♀️ • Following</p>
+                  </div>
+                  <i class="icon-close"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="header__icons">
+            <button class="button button-icon">
+              <i class="icon-house-fill" aria-hidden="true"></i>
+            </button>
+            <button class="button button-icon">
+              <i class="icon-messenger" aria-hidden="true"></i>
+            </button>
+            <button class="button button-icon">
+              <i class="icon-explorer" aria-hidden="true"></i>
+            </button>
+            <button class="button button-icon">
+              <i class="icon-hearth-outline" aria-hidden="true"></i>
+            </button>
+            <img
+              tabindex="0"
+              src="./images/avatar-user.png"
+              alt="Avatar user"
+              title="Avatar user"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="wrapper">
+      <section class="profile">
+        <img
+          class="profile__photo"
+          src="./images/profile-photo.png"
+          alt="Foto de perfil"
+          title="Foto de perfil"
+        />
+        <div class="profile__user">
+          <p class="profile__name">Wendy</p>
+          <button class="profile__button">Enviar mensaje</button>
+        </div>
+        <div class="profile__info">
+          <p><strong>141 </strong>publicaciones</p>
+          <p><strong>2,768 </strong>seguidores</p>
+          <p><strong>710 </strong>seguidos</p>
+        </div>
+        <p class="profile__description">
+          🌄 Disfruta de los mejores paisajes del mundo.
+        </p>
+      </section>
+      <div class="tabs">
+        <input
+          class="publications"
+          id="publications"
+          name="tabSelected"
+          type="radio"
+          checked
+        />
+        <input class="igtv" id="igtv" name="tabSelected" type="radio" />
+        <input class="tagged" id="tagged" name="tabSelected" type="radio" />
+        <div class="tabs-menu">
+          <div class="tabs__item">
+            <label for="publications">publicaciones</label>
+          </div>
+          <div class="tabs__item"><label for="igtv">igtv</label></div>
+          <div class="tabs__item"><label for="tagged">etiquetadas</label></div>
+        </div>
+        <section class="tabs-photos">
+          <div class="photosContent tabs-photos__publications">
+            <img src="./images/publicacion-foto-01.png" alt="" />
+            <img src="./images/publicacion-foto-02.png" alt="" />
+            <img src="./images/publicacion-foto-03.png" alt="" />
+            <img src="./images/publicacion-foto-04.png" alt="" />
+            <img src="./images/publicacion-foto-05.png" alt="" />
+          </div>
+          <div class="photosContent tabs-photos__igtv">
+            <img src="./images/igtv-foto-01.png" alt="" />
+            <img src="./images/igtv-foto-02.png" alt="" />
+            <img src="./images/igtv-foto-03.png" alt="" />
+            <img src="./images/igtv-foto-04.png" alt="" />
+            <img src="./images/igtv-foto-05.png" alt="" />
+          </div>
+          <div class="photosContent tabs-photos__tagged">
+            <img src="./images/etiquetada-foto-01.png" alt="" />
+            <img src="./images/etiquetada-foto-02.png" alt="" />
+            <img src="./images/etiquetada-foto-03.png" alt="" />
+            <img src="./images/etiquetada-foto-04.png" alt="" />
+            <img src="./images/etiquetada-foto-05.png" alt="" />
+          </div>
+        </section>
+      </div>
+    </main>
+    <dialog class="modal">
+      <img class="modal__image" src="./images/image-modal.png" alt="" />
+      <div class="card__user">
+        <div class="card__user__avatar">
+          <a href="./perfil.html">
+            <img
+              src="./images/card-avatar-img.png"
+              alt="Avatar card"
+              title="Avatar card"
+            />
+            <p>wendy</p>
+          </a>
+        </div>
+        <i class="icon-more"></i>
+      </div>
+      <div class="card__tags">
+        <div class="card__user__avatar">
+          <a href="./perfil.html">
+            <img
+              src="./images/card-avatar-img.png"
+              alt="Avatar card"
+              title="Avatar card"
+            />
+            <p>wendy</p>
+          </a>
+        </div>
+        <a href="#">
+          #paisajes #paisajesnaturales #paisajesespaña #paisajesperu
+          #paisajesecuador #paisajesargentinos #paisajes_mexico
+          #paisajes_argentinos #paisajesdechile #paisajeschile
+          #paisajesvenezolanos #paisajesargentina #paisajescolombianos
+          #paisajescostarica #paisajesincreibles
+        </a>
+      </div>
+      <div class="card__actions">
+        <div class="card__actions__group">
+          <button class="button">
+            <i class="icon-hearth-outline"></i>
+          </button>
+          <button class="button">
+            <i class="icon-message-outline"></i>
+          </button>
+          <button class="button">
+            <i class="icon-direct"></i>
+          </button>
+        </div>
+        <button class="button">
+          <i class="icon-collection"></i>
+        </button>
+      </div>
+      <div class="card__text">
+        <p>49,643 Me gusta</p>
+        <p>
+          <strong>wendy</strong> Amet minim mollit non deserunt ullamco est sit
+          aliqua dolor do amet sint. Velit officia consequat duis enim velit
+          mollit. Exercitation veniam consequat sunt nostrud amet.
+        </p>
+        <p class="secondary">Ver los 269 comentarios</p>
+        <p class="time">Hace 31 minutos · <span>Ver traducción</span></p>
+      </div>
+      <div class="card__comment">
+        <div class="card__comment__avatar">
+          <img src="./images/avatar-commet.png" alt="Avatar comment" />
+          <p>Agrega un comentario...</p>
+        </div>
+        <strong>Publicar</strong>
+      </div>
+    </dialog>
+    <script src="./js/modal.js" type="module" async></script>
+  </body>
+</html>

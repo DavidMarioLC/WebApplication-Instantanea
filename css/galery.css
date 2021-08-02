@@ -1,0 +1,51 @@
+.contenedor-test {
+}
+
+.galery {
+  /* height: 636px; */
+  width: 636px;
+  max-width: 100%;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.galery__content {
+  height: 100%;
+  display: flex;
+  transition: transform 250ms ease-in;
+}
+
+.galery__image {
+  height: auto;
+  max-width: 100%;
+  flex-shrink: 0;
+  /*para que funcione el clientWidth*/
+  flex-basis: 100%;
+}
+
+.galery__button {
+  position: absolute;
+  top: 50%;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--white);
+}
+
+.galery__button.back {
+  z-index: 1; /*para que el boton no sea tapado*/
+  left: 10px;
+}
+
+.galery__button.next {
+  z-index: 1;
+  right: 10px;
+}
+
+.is-hidden {
+  display: none;
+}

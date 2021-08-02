@@ -1,0 +1,88 @@
+[name="tabSelected"] {
+  display: none;
+}
+
+.tabs {
+  text-align: center;
+  border-top: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+.tabs-menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.tabs__item {
+  position: relative;
+}
+
+.tabs__item label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem 0.5rem;
+  font: var(--textBold);
+  text-transform: uppercase;
+}
+
+.tabs
+  .publications:checked
+  ~ .tabs-menu
+  > .tabs__item
+  label[for="publications"]::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: var(--black);
+}
+
+.tabs .igtv:checked ~ .tabs-menu > .tabs__item label[for="igtv"]::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: var(--black);
+}
+.tabs .tagged:checked ~ .tabs-menu > .tabs__item label[for="tagged"]::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: var(--black);
+}
+
+.tabs-photos {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.tabs-photos img {
+  cursor: pointer;
+}
+
+.photosContent {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center center;
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+}
+.tabs .publications:checked ~ .tabs-photos .tabs-photos__publications {
+  display: grid;
+}
+
+.tabs .igtv:checked ~ .tabs-photos .tabs-photos__igtv {
+  display: grid;
+}
+
+.tabs .tagged:checked ~ .tabs-photos .tabs-photos__tagged {
+  display: grid;
+}

@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../icons/icomoon.eot?x0k94b");
+  src: url("../icons/icomoon.eot?x0k94b#iefix") format("embedded-opentype"),
+    url("../icons/icomoon.ttf?x0k94b") format("truetype"),
+    url("../icons/icomoon.woff?x0k94b") format("woff"),
+    url("../icons/icomoon.svg?x0k94b#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-explorer:before {
+  content: "\e911";
+}
+.icon-add-inline:before {
+  content: "\e900";
+}
+.icon-arrow-left:before {
+  content: "\e901";
+}
+.icon-arrow-right:before {
+  content: "\e902";
+}
+.icon-camara-fill:before {
+  content: "\e903";
+}
+.icon-camara-outline:before {
+  content: "\e904";
+}
+.icon-close:before {
+  content: "\e905";
+}
+.icon-collection:before {
+  content: "\e906";
+}
+.icon-direct:before {
+  content: "\e907";
+}
+.icon-hearth-fill:before {
+  content: "\e908";
+}
+.icon-hearth-outline:before {
+  content: "\e909";
+}
+.icon-house-fill:before {
+  content: "\e90a";
+}
+.icon-house-outline:before {
+  content: "\e90b";
+}
+.icon-message-fill:before {
+  content: "\e90c";
+}
+.icon-message-outline:before {
+  content: "\e90d";
+}
+.icon-messenger:before {
+  content: "\e90e";
+}
+.icon-more:before {
+  content: "\e90f";
+}
+.icon-search:before {
+  content: "\e910";
+}

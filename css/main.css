@@ -1,0 +1,36 @@
+.main__content {
+  margin-top: 1.5rem;
+
+  display: grid;
+  grid-template-columns: 1fr 18.75rem;
+  grid-template-areas: "main main";
+}
+
+.page {
+  grid-area: main;
+}
+
+.sidebar {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .main__content {
+    grid-template-areas: "main sidebar";
+    gap: 1.5rem;
+  }
+
+  .page {
+    grid-area: main;
+  }
+
+  .sidebar {
+    display: block;
+    grid-area: sidebar;
+  }
+
+  .sidebar__content {
+    position: sticky;
+    top: 95px;
+  }
+}

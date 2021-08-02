@@ -1,0 +1,39 @@
+.listUsers {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.listUsers__user {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr;
+  place-items: center start;
+  column-gap: 0.5rem;
+}
+
+.listUsers__user img {
+  max-width: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+.listUsers__user__avatar {
+}
+
+.listUsers__avatar p {
+  margin: 0;
+  font: var(--text1);
+  color: var(--gray20);
+}
+
+.listUsers__avatar p:first-child {
+  margin: 0;
+  font: var(--textBold);
+  color: var(--black);
+}
+
+.listUsers__user__change {
+  font: var(--textBold);
+  color: var(--blue10);
+}

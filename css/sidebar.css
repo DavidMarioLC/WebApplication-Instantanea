@@ -1,0 +1,39 @@
+.sidebar {
+  padding-top: 1rem;
+}
+
+.current__user {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr;
+  place-items: center start;
+  column-gap: 0.5rem;
+}
+
+.current__user img {
+  max-width: 100%;
+}
+
+.current__user__avatar {
+}
+
+.current__user__avatar p {
+  margin: 0;
+  font: var(--text1);
+  color: var(--gray20);
+}
+
+.current__user__avatar p:first-child {
+  margin: 0;
+  font: var(--textBold);
+  color: var(--black);
+}
+
+.current__user__change {
+  font: var(--textBold);
+  color: var(--blue10);
+}
+
+.sidebar__title {
+  font: var(--textBold);
+}
