@@ -1,14 +1,27 @@
-const backButton = document.querySelector('.galery__button.back');
-const nextButton =document.querySelector('.galery__button.next');
+const backButton = document.querySelectorAll('.galery__button.back');
+const nextButton =document.querySelectorAll('.galery__button.next');
 
-const galery = document.querySelector('.galery__content');
-const images = Array.from(galery.children);
-const sizeImage = images[0].getBoundingClientRect().width;
+let galery = document.querySelectorAll('.galery__content');
 
 
-images.forEach((item,index) => item.setAttribute('data-size',sizeImage*index))
+let listImagesGalery = Array.from(galery);
+let images = listImagesGalery.map(item=> item)
+
+
+
+
+
+// const sizeImage = images[0].getBoundingClientRect().width;
+const sizeImage = listImagesGalery[0].children[0].getBoundingClientRect().width;
+
+// images.forEach((item,index) => item.setAttribute('data-size',sizeImage*index))
+listImagesGalery.forEach((galery__content)=>{
+  Array.from(galery__content.children).forEach((item,index) => item.setAttribute('data-size',sizeImage * index))
+})
+
 
 const hideShowButton = (nextButton,backButton,images,nextIndex) => {
+
 const sizeTotalImages = images.length - 1;
   
   if(nextIndex === sizeTotalImages ){
@@ -24,6 +37,9 @@ const sizeTotalImages = images.length - 1;
 }
 
 const moveSlide = (galery, currentImage, targetImage) => {
+  console.log(galery)
+  console.log(currentImage)
+  console.log(targetImage)
   galery.style.transform =`translateX(-${targetImage.dataset.size}px)`;
   currentImage.classList.remove('current-image');
   targetImage.classList.add('current-image');
@@ -32,33 +48,57 @@ const moveSlide = (galery, currentImage, targetImage) => {
 
 
 
-nextButton.addEventListener('click',_ =>{
-  const currentImage = galery.querySelector('.current-image');
+
+nextButton.forEach( (btn,index) => btn.addEventListener('click',e =>{
+  const currentImage = listImagesGalery[index].querySelector('.current-image');
   const nextImage = currentImage.nextElementSibling;
-  const nextIndex = images.findIndex(image => image === nextImage);
+
+  const imageArray = Array.from(images[index].children)
   
-  moveSlide(galery,currentImage,nextImage)
-  hideShowButton(nextButton,backButton,images,nextIndex)
-
-})
+  const nextIndex = imageArray.findIndex(image => image === nextImage);
 
 
-backButton.addEventListener('click',_ =>{
-  const currentImage = galery.querySelector('.current-image');
+
+  moveSlide(listImagesGalery[index],currentImage,nextImage)
+  
+  hideShowButton(nextButton[index],backButton[index],imageArray,nextIndex)
+}))
+
+
+backButton.forEach( (btn,index) => btn.addEventListener('click',e =>{
+  const currentImage = galery[index].querySelector('.current-image');
   const prevImage = currentImage.previousElementSibling;
-  const prevIndex = images.findIndex(image => image === prevImage);
 
-  moveSlide(galery,currentImage,prevImage)
-  hideShowButton(nextButton,backButton,images,prevIndex)
+  const imageArray = Array.from(images[index].children)
+ 
+  const prevIndex = imageArray.findIndex(image => image === prevImage);
 
-})
+  moveSlide(galery[index],currentImage,prevImage)
+  hideShowButton(nextButton[index],backButton[index],images[index],prevIndex)
+}))
 
 
-// nextButton.forEach( btn => btn.addEventListener('click',e =>{
+
+// nextButton.addEventListener('click',_ =>{
 //   const currentImage = galery.querySelector('.current-image');
 //   const nextImage = currentImage.nextElementSibling;
 //   const nextIndex = images.findIndex(image => image === nextImage);
   
 //   moveSlide(galery,currentImage,nextImage)
 //   hideShowButton(nextButton,backButton,images,nextIndex)
-// }))
+
+// })
+
+
+
+// backButton.addEventListener('click',_ =>{
+//   const currentImage = galery.querySelector('.current-image');
+//   const prevImage = currentImage.previousElementSibling;
+//   const prevIndex = images.findIndex(image => image === prevImage);
+
+//   moveSlide(galery,currentImage,prevImage)
+//   hideShowButton(nextButton,backButton,images,prevIndex)
+
+// })
+
+

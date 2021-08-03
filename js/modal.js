@@ -5,7 +5,7 @@ const modalImage = document.querySelector('.modal__image');
 function mostrarModal(e){
   e.stopPropagation();
 
-  // modalImage.src = e.target.src;
+  modalImage.src = e.target.src;
 
   modal.showModal();
 }

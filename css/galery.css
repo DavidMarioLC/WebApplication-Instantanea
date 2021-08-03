@@ -18,10 +18,13 @@
 
 .galery__image {
   height: auto;
-  max-width: 100%;
-  flex-shrink: 0;
+  aspect-ratio: 4/2;
+  object-fit: cover;
+  /* width: auto; */
+  /* max-width: 100%; */
   /*para que funcione el clientWidth*/
-  flex-basis: 100%;
+  /* flex-shrink: 0; */
+  /* flex-basis: 100%; */
 }
 
 .galery__button {
@@ -48,4 +51,17 @@
 
 .is-hidden {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .galery__image {
+    height: auto;
+    width: auto;
+    aspect-ratio: 4/4;
+    object-fit: cover;
+    /* max-width: 100%; */
+    /*para que funcione el clientWidth*/
+    /* flex-shrink: 0; */
+    /* flex-basis: 100%; */
+  }
 }

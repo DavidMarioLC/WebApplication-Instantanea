@@ -1,19 +1,17 @@
 .modal[open] {
   padding: 0;
-  width: 917px;
-  height: 579px;
+  width: 400px;
   border: none;
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-columns: auto;
+  grid-template-rows: min-content 80px 80px;
   grid-template-areas:
-    "image user"
-    "image tags"
-    "image actions"
-    "image text"
-    "image comment";
+    "image"
+    "user"
+    "actions";
   place-items: center top;
 }
+
 .modal__image {
   grid-area: image;
   max-width: 100%;
@@ -29,31 +27,80 @@
   outline: none;
 }
 
-.modal .card__tags {
-  grid-area: tags;
-  padding: 0 1rem;
-  font: var(--text1);
-}
-
-.modal .card__tags > a {
-  display: inline-block;
-  color: var(--blue20);
-  padding-left: 2.1rem;
-  font: var(--text3);
-}
-
 .modal .card__actions {
   grid-area: actions;
 }
 
-.modal .card__text {
-  grid-area: text;
-}
-
-.modal .card__comment {
-  grid-area: comment;
+.modal .card__text,
+.modal .card__comment,
+.modal .card__tags {
+  display: none;
 }
 
 .modal::backdrop {
   background-color: rgb(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 768px) {
+  .modal[open] {
+    padding: 0;
+    width: 917px;
+    height: 579px;
+    border: none;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "image user"
+      "image tags"
+      "image actions"
+      "image text"
+      "image comment";
+    place-items: center top;
+  }
+  .modal__image {
+    grid-area: image;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .modal .card__user {
+    grid-area: user;
+    padding: 1rem;
+  }
+
+  .modal .card__text,
+  .modal .card__tags {
+    display: block;
+  }
+
+  .modal .card__tags {
+    grid-area: tags;
+    padding: 0 1rem;
+    font: var(--text1);
+  }
+
+  .modal .card__tags > a {
+    display: inline-block;
+    color: var(--blue20);
+    padding-left: 2.1rem;
+    font: var(--text3);
+  }
+
+  .modal .card__actions {
+    grid-area: actions;
+  }
+
+  .modal .card__text {
+    grid-area: text;
+  }
+
+  .modal .card__comment {
+    display: flex;
+    grid-area: comment;
+  }
+
+  .modal::backdrop {
+    background-color: rgb(0, 0, 0, 0.5);
+  }
 }
