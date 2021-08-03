@@ -1,0 +1,98 @@
+.modalStory[open] {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding: 2.25rem;
+}
+.modalStory::backdrop {
+  background-color: rgb(26, 26, 26);
+}
+
+.modalStory__logo {
+  align-self: flex-start;
+}
+
+.modalStory__logo img {
+  height: 40px;
+}
+
+.modalStory__content {
+  position: relative;
+  padding: 0 4rem;
+}
+
+/* story */
+.modalStory__story {
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.modalStory__progress {
+  position: absolute;
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem 1rem;
+  box-sizing: border-box;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.modalStory__progress__item {
+  flex: 1;
+  appearance: none;
+  height: 5px;
+}
+
+.modalStory__progress__item[value]::-webkit-progress-bar {
+  border-radius: 15px;
+}
+.modalStory__progress__item[value]::-webkit-progress-value {
+  background: #fff;
+  border-radius: 15px;
+}
+
+.modalStory__progress__item::-webkit-progress-bar,
+.modalStory__progress__item::-webkit-progress-value {
+  border-radius: 3px;
+}
+
+.modalStory__video {
+  max-width: 100%;
+  object-fit: fill;
+  vertical-align: middle;
+}
+
+/* extern buttons */
+.modalStory__icon {
+  align-self: flex-start;
+}
+.modalStory__icon .button {
+  padding: 1rem;
+}
+
+.modalStory__button {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: var(--white);
+  position: absolute;
+  top: 50%;
+}
+
+.modalStory__button.back {
+  left: 0;
+}
+.modalStory__button.next {
+  right: 0;
+}
+
+.modalStory__icon i {
+  font-size: 1rem;
+  color: var(--white);
+}

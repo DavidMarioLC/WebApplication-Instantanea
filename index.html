@@ -137,7 +137,7 @@
           <section class="page">
             <div class="carousel">
               <div class="carousel__content">
-                <div tabindex="0" class="carousel__item">
+                <div tabindex="0" class="carousel__item" id="myStory">
                   <img
                     class="carousel__item__img"
                     src="./images/story-user-01.png"
@@ -558,7 +558,46 @@
         </div>
       </div>
     </main>
-    <dialog class="ModalStories"></dialog>
+    <dialog class="modalStory">
+      <div class="modalStory__logo">
+        <img src="./images/logo-white.svg" alt="Logo instantanea" />
+      </div>
+      <div class="modalStory__content">
+        <button class="button modalStory__button back">
+          <i class="icon-arrow-left"></i>
+        </button>
+        <div class="modalStory__story">
+          <div class="modalStory__progress">
+            <progress
+              class="modalStory__progress__item"
+              value="0"
+              max="0"
+            ></progress>
+            <!-- <progress
+              class="modalStory__progress_item"
+              value="71"
+              max="100"
+            ></progress>
+            <progress
+              class="modalStory__progress_item"
+              value="71"
+              max="100"
+            ></progress> -->
+          </div>
+          <video class="modalStory__video">
+            <source src="./videos/leonidas-video.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <button class="button modalStory__button next">
+          <i class="icon-arrow-right"></i>
+        </button>
+      </div>
+      <div class="modalStory__icon">
+        <button class="button" id="btnModalClose">
+          <i class="icon-close" aria-hidden="true"></i>
+        </button>
+      </div>
+    </dialog>
     <script type="module" src="./js/app.js" async></script>
   </body>
 </html>
