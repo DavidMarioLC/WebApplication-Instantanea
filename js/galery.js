@@ -37,9 +37,7 @@ const sizeTotalImages = images.length - 1;
 }
 
 const moveSlide = (galery, currentImage, targetImage) => {
-  console.log(galery)
-  console.log(currentImage)
-  console.log(targetImage)
+ 
   galery.style.transform =`translateX(-${targetImage.dataset.size}px)`;
   currentImage.classList.remove('current-image');
   targetImage.classList.add('current-image');
@@ -78,27 +76,5 @@ backButton.forEach( (btn,index) => btn.addEventListener('click',e =>{
 }))
 
 
-
-// nextButton.addEventListener('click',_ =>{
-//   const currentImage = galery.querySelector('.current-image');
-//   const nextImage = currentImage.nextElementSibling;
-//   const nextIndex = images.findIndex(image => image === nextImage);
-  
-//   moveSlide(galery,currentImage,nextImage)
-//   hideShowButton(nextButton,backButton,images,nextIndex)
-
-// })
-
-
-
-// backButton.addEventListener('click',_ =>{
-//   const currentImage = galery.querySelector('.current-image');
-//   const prevImage = currentImage.previousElementSibling;
-//   const prevIndex = images.findIndex(image => image === prevImage);
-
-//   moveSlide(galery,currentImage,prevImage)
-//   hideShowButton(nextButton,backButton,images,prevIndex)
-
-// })
 
 

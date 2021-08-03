@@ -27,7 +27,9 @@
 
 /* story */
 .modalStory__story {
-  width: 500px;
+  height: 100%;
+  max-width: 500px;
+
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -35,6 +37,7 @@
 
 .modalStory__progress {
   position: absolute;
+  z-index: 1;
   display: flex;
   gap: 0.5rem;
   width: 100%;
@@ -64,8 +67,24 @@
 
 .modalStory__video {
   max-width: 100%;
+  height: 100%;
   object-fit: fill;
   vertical-align: middle;
+}
+
+.modalStory__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  max-width: 100%;
+  height: 100%;
+  object-fit: fill;
+  vertical-align: middle;
+}
+
+.is-show {
+  opacity: 1;
 }
 
 /* extern buttons */
@@ -87,6 +106,7 @@
 
 .modalStory__button.back {
   left: 0;
+  display: none;
 }
 .modalStory__button.next {
   right: 0;
