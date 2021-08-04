@@ -1,3 +1,4 @@
+import "./modalSearch.js"
 const modal = document.querySelector('.modal');
 const  photos = document.querySelectorAll('.tabs-photos img')
 const modalImage = document.querySelector('.modal__image');
