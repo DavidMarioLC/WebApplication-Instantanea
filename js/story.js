@@ -5,7 +5,7 @@ const $btnModalClose = document.querySelector('#btnModalClose');
 const $myStory = document.querySelector('#myStory');
 const $video = document.querySelector('.modalStory__video');
 
-$modalStory.showModal();
+
 const $progressVideo = document.querySelector('.modalStory__progress__item');
 
 $progressVideo.max = $video.duration;
