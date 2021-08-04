@@ -25,7 +25,7 @@
 .modalStory__content {
   grid-area: story;
   position: relative;
-  padding: 0 4rem;
+  /* padding: 0 4rem; */
 }
 
 /* extern buttons */
